@@ -1,0 +1,6 @@
+framework module Pods_QuickCoin {
+  umbrella header "Pods-QuickCoin-umbrella.h"
+
+  export *
+  module * { export * }
+}

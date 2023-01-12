@@ -7,21 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		276CCF05295C6BDA00BEA584 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276CCF04295C6BDA00BEA584 /* HomeScreenViewModel.swift */; };
+		276CCF09295C6C3A00BEA584 /* QuickCoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276CCF08295C6C3A00BEA584 /* QuickCoinModel.swift */; };
+		276CCF0B295C6C5400BEA584 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276CCF0A295C6C5400BEA584 /* API.swift */; };
+		276CCF0D295C6C7600BEA584 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276CCF0C295C6C7600BEA584 /* NetworkManager.swift */; };
+		276CCF0F295C6C9600BEA584 /* SearchScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276CCF0E295C6C9600BEA584 /* SearchScreenViewModel.swift */; };
+		276CCF11295C6CA700BEA584 /* DetailedScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276CCF10295C6CA700BEA584 /* DetailedScreenViewModel.swift */; };
+		276CCF14296F0BDA00BEA584 /* CurrencyDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276CCF13296F0BDA00BEA584 /* CurrencyDetailCell.swift */; };
+		276CCF17296F0C4400BEA584 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276CCF16296F0C4400BEA584 /* UIView+Ext.swift */; };
+		27C4D600295C5CF100EAD192 /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4D5FF295C5CF100EAD192 /* MainTabBarVC.swift */; };
+		27C4D602295C5D6F00EAD192 /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4D601295C5D6F00EAD192 /* HomeScreenVC.swift */; };
+		27C4D604295C5D7B00EAD192 /* SearchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4D603295C5D7B00EAD192 /* SearchScreenVC.swift */; };
+		27C4D606295C5D8600EAD192 /* DetailedScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4D605295C5D8600EAD192 /* DetailedScreenVC.swift */; };
 		27D84052295C4D800013D48B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D84051295C4D800013D48B /* AppDelegate.swift */; };
 		27D84054295C4D800013D48B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D84053295C4D800013D48B /* SceneDelegate.swift */; };
-		27D84056295C4D800013D48B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D84055295C4D800013D48B /* ViewController.swift */; };
 		27D8405B295C4D810013D48B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D8405A295C4D810013D48B /* Assets.xcassets */; };
 		27D8405E295C4D810013D48B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D8405C295C4D810013D48B /* LaunchScreen.storyboard */; };
+		DC0A48C346609F0D5CFB35F7 /* Pods_QuickCoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DBD303DB99677CB13DE5A18 /* Pods_QuickCoin.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		276CCF04295C6BDA00BEA584 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		276CCF08295C6C3A00BEA584 /* QuickCoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCoinModel.swift; sourceTree = "<group>"; };
+		276CCF0A295C6C5400BEA584 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		276CCF0C295C6C7600BEA584 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		276CCF0E295C6C9600BEA584 /* SearchScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenViewModel.swift; sourceTree = "<group>"; };
+		276CCF10295C6CA700BEA584 /* DetailedScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedScreenViewModel.swift; sourceTree = "<group>"; };
+		276CCF13296F0BDA00BEA584 /* CurrencyDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDetailCell.swift; sourceTree = "<group>"; };
+		276CCF16296F0C4400BEA584 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		279AD9A06FF8D0777FE52A94 /* Pods-QuickCoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickCoin.debug.xcconfig"; path = "Target Support Files/Pods-QuickCoin/Pods-QuickCoin.debug.xcconfig"; sourceTree = "<group>"; };
+		27C4D5FF295C5CF100EAD192 /* MainTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
+		27C4D601295C5D6F00EAD192 /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
+		27C4D603295C5D7B00EAD192 /* SearchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenVC.swift; sourceTree = "<group>"; };
+		27C4D605295C5D8600EAD192 /* DetailedScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedScreenVC.swift; sourceTree = "<group>"; };
 		27D8404E295C4D800013D48B /* QuickCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D84051295C4D800013D48B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27D84053295C4D800013D48B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		27D84055295C4D800013D48B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		27D8405A295C4D810013D48B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27D8405D295C4D810013D48B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27D8405F295C4D810013D48B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DBD303DB99677CB13DE5A18 /* Pods_QuickCoin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickCoin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5FDBB068928A08958EDF8F4 /* Pods-QuickCoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickCoin.release.xcconfig"; path = "Target Support Files/Pods-QuickCoin/Pods-QuickCoin.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +55,75 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC0A48C346609F0D5CFB35F7 /* Pods_QuickCoin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		276CCF02295C6BB300BEA584 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				276CCF13296F0BDA00BEA584 /* CurrencyDetailCell.swift */,
+				276CCF12296F0B7A00BEA584 /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		276CCF03295C6BCA00BEA584 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				276CCF04295C6BDA00BEA584 /* HomeScreenViewModel.swift */,
+				276CCF0E295C6C9600BEA584 /* SearchScreenViewModel.swift */,
+				276CCF10295C6CA700BEA584 /* DetailedScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		276CCF06295C6C1500BEA584 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				276CCF08295C6C3A00BEA584 /* QuickCoinModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		276CCF07295C6C1F00BEA584 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				276CCF0A295C6C5400BEA584 /* API.swift */,
+				276CCF0C295C6C7600BEA584 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		276CCF12296F0B7A00BEA584 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				27C4D601295C5D6F00EAD192 /* HomeScreenVC.swift */,
+				27C4D603295C5D7B00EAD192 /* SearchScreenVC.swift */,
+				27C4D605295C5D8600EAD192 /* DetailedScreenVC.swift */,
+				27C4D5FF295C5CF100EAD192 /* MainTabBarVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		276CCF15296F0C2800BEA584 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				276CCF16296F0C4400BEA584 /* UIView+Ext.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		27D84045295C4D800013D48B = {
 			isa = PBXGroup;
 			children = (
 				27D84050295C4D800013D48B /* QuickCoin */,
 				27D8404F295C4D800013D48B /* Products */,
+				D832034B988B42EBFE55515B /* Pods */,
+				63724F2503EB93135A6E44F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +138,35 @@
 		27D84050295C4D800013D48B /* QuickCoin */ = {
 			isa = PBXGroup;
 			children = (
+				276CCF15296F0C2800BEA584 /* Helpers */,
+				276CCF07295C6C1F00BEA584 /* Network */,
+				276CCF06295C6C1500BEA584 /* Model */,
+				276CCF03295C6BCA00BEA584 /* ViewModel */,
+				276CCF02295C6BB300BEA584 /* View */,
 				27D84051295C4D800013D48B /* AppDelegate.swift */,
 				27D84053295C4D800013D48B /* SceneDelegate.swift */,
-				27D84055295C4D800013D48B /* ViewController.swift */,
 				27D8405A295C4D810013D48B /* Assets.xcassets */,
 				27D8405C295C4D810013D48B /* LaunchScreen.storyboard */,
 				27D8405F295C4D810013D48B /* Info.plist */,
 			);
 			path = QuickCoin;
+			sourceTree = "<group>";
+		};
+		63724F2503EB93135A6E44F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DBD303DB99677CB13DE5A18 /* Pods_QuickCoin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D832034B988B42EBFE55515B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				279AD9A06FF8D0777FE52A94 /* Pods-QuickCoin.debug.xcconfig */,
+				F5FDBB068928A08958EDF8F4 /* Pods-QuickCoin.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27D84062295C4D810013D48B /* Build configuration list for PBXNativeTarget "QuickCoin" */;
 			buildPhases = (
+				1AF4ED765665F839095CA362 /* [CP] Check Pods Manifest.lock */,
 				27D8404A295C4D800013D48B /* Sources */,
 				27D8404B295C4D800013D48B /* Frameworks */,
 				27D8404C295C4D800013D48B /* Resources */,
+				B25AAD17C1BD5D0298F8355B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,14 +236,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1AF4ED765665F839095CA362 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuickCoin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B25AAD17C1BD5D0298F8355B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuickCoin/Pods-QuickCoin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuickCoin/Pods-QuickCoin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuickCoin/Pods-QuickCoin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		27D8404A295C4D800013D48B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27D84056295C4D800013D48B /* ViewController.swift in Sources */,
+				276CCF0D295C6C7600BEA584 /* NetworkManager.swift in Sources */,
 				27D84052295C4D800013D48B /* AppDelegate.swift in Sources */,
+				27C4D604295C5D7B00EAD192 /* SearchScreenVC.swift in Sources */,
+				276CCF05295C6BDA00BEA584 /* HomeScreenViewModel.swift in Sources */,
+				276CCF17296F0C4400BEA584 /* UIView+Ext.swift in Sources */,
+				276CCF0F295C6C9600BEA584 /* SearchScreenViewModel.swift in Sources */,
 				27D84054295C4D800013D48B /* SceneDelegate.swift in Sources */,
+				27C4D602295C5D6F00EAD192 /* HomeScreenVC.swift in Sources */,
+				27C4D600295C5CF100EAD192 /* MainTabBarVC.swift in Sources */,
+				276CCF11295C6CA700BEA584 /* DetailedScreenViewModel.swift in Sources */,
+				276CCF09295C6C3A00BEA584 /* QuickCoinModel.swift in Sources */,
+				276CCF14296F0BDA00BEA584 /* CurrencyDetailCell.swift in Sources */,
+				276CCF0B295C6C5400BEA584 /* API.swift in Sources */,
+				27C4D606295C5D8600EAD192 /* DetailedScreenVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +430,7 @@
 		};
 		27D84063295C4D810013D48B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 279AD9A06FF8D0777FE52A94 /* Pods-QuickCoin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -296,6 +457,7 @@
 		};
 		27D84064295C4D810013D48B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5FDBB068928A08958EDF8F4 /* Pods-QuickCoin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
