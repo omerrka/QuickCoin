@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270C327B297EE27A0070FFA2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270C327A297EE27A0070FFA2 /* Constants.swift */; };
+		275BE37D2979C43A008A16E7 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275BE37C2979C43A008A16E7 /* RootNavigationController.swift */; };
 		276CCF05295C6BDA00BEA584 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276CCF04295C6BDA00BEA584 /* HomeScreenViewModel.swift */; };
 		276CCF09295C6C3A00BEA584 /* QuickCoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276CCF08295C6C3A00BEA584 /* QuickCoinModel.swift */; };
 		276CCF0B295C6C5400BEA584 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276CCF0A295C6C5400BEA584 /* API.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		270C327A297EE27A0070FFA2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		275BE37C2979C43A008A16E7 /* RootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
 		276CCF04295C6BDA00BEA584 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 		276CCF08295C6C3A00BEA584 /* QuickCoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCoinModel.swift; sourceTree = "<group>"; };
 		276CCF0A295C6C5400BEA584 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 				27C4D603295C5D7B00EAD192 /* SearchScreenVC.swift */,
 				27C4D605295C5D8600EAD192 /* DetailedScreenVC.swift */,
 				27C4D5FF295C5CF100EAD192 /* MainTabBarVC.swift */,
+				275BE37C2979C43A008A16E7 /* RootNavigationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				276CCF16296F0C4400BEA584 /* UIView+Ext.swift */,
+				270C327A297EE27A0070FFA2 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -290,7 +296,9 @@
 				276CCF17296F0C4400BEA584 /* UIView+Ext.swift in Sources */,
 				276CCF0F295C6C9600BEA584 /* SearchScreenViewModel.swift in Sources */,
 				27D84054295C4D800013D48B /* SceneDelegate.swift in Sources */,
+				270C327B297EE27A0070FFA2 /* Constants.swift in Sources */,
 				27C4D602295C5D6F00EAD192 /* HomeScreenVC.swift in Sources */,
+				275BE37D2979C43A008A16E7 /* RootNavigationController.swift in Sources */,
 				27C4D600295C5CF100EAD192 /* MainTabBarVC.swift in Sources */,
 				276CCF11295C6CA700BEA584 /* DetailedScreenViewModel.swift in Sources */,
 				276CCF09295C6C3A00BEA584 /* QuickCoinModel.swift in Sources */,

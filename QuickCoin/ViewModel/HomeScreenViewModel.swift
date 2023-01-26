@@ -18,6 +18,8 @@ class HomeScreenViewModel {
     let currencyArray = ["ADA", "BNB", "BTC", "DOGE", "ETH", "EUR", "GBP", "TRY", "USD", "XRP"]
     
     var homeScreenDelegate: homeScreenDelegate?
+    var firstCurrency: String = ""
+    var secondCurrency: String = ""
     
     fileprivate(set) var currencyRate: Float = Float()
     
@@ -35,7 +37,7 @@ class HomeScreenViewModel {
             switch result {
             case .success(let currency):
                 strongSelf.currencyRate = currency.rate
-                self?.homeScreenDelegate?.updateRate()
+                strongSelf.homeScreenDelegate?.updateRate()
             case .failure(let error):
                 print(error.localizedDescription)
             }

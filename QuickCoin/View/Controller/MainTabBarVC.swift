@@ -12,9 +12,10 @@ class MainTabBarVC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let vc1 = UINavigationController(rootViewController: HomeScreenVC())
-        let vc2 = UINavigationController(rootViewController: SearchScreenVC())
-        let vc3 = UINavigationController(rootViewController: DetailedScreenVC())
+        let vc1 = RootNavigationController(rootViewController: HomeScreenVC())
+        let vc2 = RootNavigationController(rootViewController: SearchScreenVC())
+        let vc3 = RootNavigationController(rootViewController: DetailedScreenVC())
+
         
         vc1.tabBarItem.image = UIImage(systemName: "house.fill")
         vc2.tabBarItem.image = UIImage(systemName: "magnifyingglass.circle")

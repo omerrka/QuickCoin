@@ -8,11 +8,10 @@
 import Moya
 import Alamofire
 
-
-
-let apikey = "0D3F5B3C-F198-4CBA-9E60-3C2D93ECAF0C"
+var constants = Constants()
 
 enum API {
+    
     case homeScreen(firstCurrency: String, secondCurrency: String)
     case searchScreen(searchedCurrency: String)
     case detailScreen(firstCurrency: String, secondCurrency: String, periodID: String, limit: String, timeStart: String, timeEnd: String)
@@ -21,7 +20,7 @@ enum API {
 
 extension API: TargetType {
     var baseURL: URL {
-        guard let url = URL(string: "https://rest.coinapi.io/v1/exchangerate/") else { fatalError() }
+        guard let url = URL(string: constants.baseURL) else { fatalError() }
         return url
     }
     
@@ -48,13 +47,13 @@ extension API: TargetType {
     var task: Task {
         
         var params: [String: Any] = [:]
-        params["apikey"] = apikey
+        params["apikey"] = constants.apikey
         
         switch self {
         case .homeScreen:
-            return .requestParameters(parameters: ["apikey": apikey], encoding: URLEncoding.queryString)
+            return .requestParameters(parameters: ["apikey": constants.apikey], encoding: URLEncoding.queryString)
         case .searchScreen:
-            return .requestParameters(parameters: ["apikey": apikey], encoding: URLEncoding.queryString)
+            return .requestParameters(parameters: ["apikey": constants.apikey], encoding: URLEncoding.queryString)
         case let .detailScreen(_, _, periodID, limit, timeStart, timeEnd):
             params["period_id"] = periodID
             params["limit"] = limit

@@ -9,15 +9,17 @@ import Foundation
 import Moya
 
 protocol SearchScreenDelegate {
-    func updateUSDCurrency(USD: Int)
-    func updateEURCurrency(EUR: Int)
-    func updateAUDCurrency(AUD: Int)
-    func updateTRYCurrency(TRY: Int)
-    
+    func updateCurrency()
 }
 
 class SearchScreenViewModel {
     
+    var USDIndexNumber = Int()
+    var EURIndexNumber = Int()
+    var AUDIndexNumber = Int()
+    var TRYIndexNumber = Int()
+    
+    var currencyRateDictionary = [Int: Double]()
     
     fileprivate(set) var searchedCurrency: [Rate] = [Rate]()
     
@@ -36,19 +38,26 @@ class SearchScreenViewModel {
             guard let strongSelf = self else { return }
             switch result {
             case .success(let searchedCurrency):
+                self?.currencyRateDictionary.removeAll()
                 strongSelf.searchedCurrency = searchedCurrency.rates
-                if let USD = strongSelf.searchedCurrency.firstIndex(where: { $0.assetIDQuote == "USD" }) {
-                    strongSelf.searchScreenDelegate?.updateUSDCurrency(USD: USD)
+                if let USDIndex = strongSelf.searchedCurrency.firstIndex(where: { $0.assetIDQuote == "USD" }) {
+                    self?.currencyRateDictionary[USDIndex] = searchedCurrency.rates[USDIndex].rate
+                    self?.USDIndexNumber = USDIndex
                 }
-                if let EUR = strongSelf.searchedCurrency.firstIndex(where: { $0.assetIDQuote == "EUR" }) {
-                    strongSelf.searchScreenDelegate?.updateEURCurrency(EUR: EUR)
+                if let EURIndex = strongSelf.searchedCurrency.firstIndex(where: { $0.assetIDQuote == "EUR" }) {
+                    self?.currencyRateDictionary[EURIndex] = searchedCurrency.rates[EURIndex].rate
+                    self?.EURIndexNumber = EURIndex
                 }
-                if let AUD = strongSelf.searchedCurrency.firstIndex(where: { $0.assetIDQuote == "AUD" }) {
-                    strongSelf.searchScreenDelegate?.updateAUDCurrency(AUD: AUD)
+                if let AUDIndex = strongSelf.searchedCurrency.firstIndex(where: { $0.assetIDQuote == "AUD" }) {
+                    self?.currencyRateDictionary[AUDIndex] = searchedCurrency.rates[AUDIndex].rate
+                    self?.AUDIndexNumber = AUDIndex
                 }
-                if let TRY = strongSelf.searchedCurrency.firstIndex(where: { $0.assetIDQuote == "TRY" }) {
-                    strongSelf.searchScreenDelegate?.updateTRYCurrency(TRY: TRY)
+                if let TRYIndex = strongSelf.searchedCurrency.firstIndex(where: { $0.assetIDQuote == "TRY" }) {
+                    self?.currencyRateDictionary[TRYIndex] = searchedCurrency.rates[TRYIndex].rate
+                    self?.TRYIndexNumber = TRYIndex
                 }
+                strongSelf.searchScreenDelegate?.updateCurrency()
+
             case .failure(let error):
                 print(error.localizedDescription)
             }

@@ -35,6 +35,7 @@ class CurrencyDetailCell: UITableViewCell {
     }
     
     func setLabelConstraints() {
+        
         timeStartLabel.translatesAutoresizingMaskIntoConstraints = false
         timeStartLabel.topAnchor.constraint(equalTo: topAnchor, constant: 12).isActive = true
         timeStartLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive = true
@@ -58,6 +59,7 @@ class CurrencyDetailCell: UITableViewCell {
     }
     
     func setupDetails(detail: DetailedScreenCoinData) {
+        
         timeStartLabel.text = "Date: " + String(detail.timeOpen.prefix(10))
         timeStartLabel.textColor = .white
         rateHighLabel.text = "Rate High: " + String(detail.rateHigh)

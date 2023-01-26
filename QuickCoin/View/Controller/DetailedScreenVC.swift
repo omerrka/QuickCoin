@@ -9,9 +9,9 @@ import UIKit
 
 class DetailedScreenVC: UIViewController {
     
+    let constants = Constants()
     private let detailedScreenViewModel = DetailedScreenViewModel()
     private let currencyDetailCell = CurrencyDetailCell()
-    let appearance = UINavigationBarAppearance()
     var firstDateTextField = UITextField()
     var secondDateTextField = UITextField()
     var firstCurrencyTextField = UITextField()
@@ -20,6 +20,7 @@ class DetailedScreenVC: UIViewController {
     var firstDatePicker = UIDatePicker()
     var secondDatePicker = UIDatePicker()
     var tableView = UITableView()
+    var backgroundView: UIView?
     
     struct Cells {
         static let detailCell = "CurrencyDetailCell"
@@ -27,24 +28,15 @@ class DetailedScreenVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .white
         
         showDetailButton.addTarget(self, action: #selector(showDetailAction(sender:)), for: .touchUpInside)
         
+        navigationItem.title = constants.detailScreenTitle
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Detailed Currency"
-        
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = UIColor(red: 55/255, green: 120/255, blue: 250/255, alpha: 1)
-        navigationController?.navigationBar.standardAppearance = appearance
-        navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
-        
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.barStyle = .black
-        navigationController?.navigationBar.tintColor = .white
-        
+
         detailedScreenViewModel.delegate = self
-        
+
         createDatepicker(datePicker: firstDatePicker, dateTextField: firstDateTextField)
         createDatepicker(datePicker: secondDatePicker, dateTextField: secondDateTextField)
         textFieldConfiguration()
@@ -150,27 +142,42 @@ class DetailedScreenVC: UIViewController {
     }
     
     @objc func showDetailAction(sender: UIButton) {
+        detailedScreenViewModel.dateFormatter(start: firstDatePicker.date, end: secondDatePicker.date)
         
-        let newFormatter = ISO8601DateFormatter()
-        let timeStart = newFormatter.string(from: firstDatePicker.date)
-        let timeEnd = newFormatter.string(from: secondDatePicker.date)
-        
-        
-        detailedScreenViewModel.loadCurrencyDetail(firstCurrency: (firstCurrencyTextField.text?.uppercased())!, secondCurrency: (secondCurrencyTextField.text?.uppercased())!, periodID: "1DAY", limit: "1000", timeStart: timeStart, timeEnd: timeEnd)
+        detailedScreenViewModel.loadCurrencyDetail(firstCurrency: (firstCurrencyTextField.text?.uppercased())!, secondCurrency: (secondCurrencyTextField.text?.uppercased())!, periodID: "1DAY", limit: "1000", timeStart: detailedScreenViewModel.timeStart, timeEnd: detailedScreenViewModel.timeEnd)
         
     }
+    
+    func showSimpleAlert() {
+        let alert = UIAlertController(title: "Please enter the currency names correctly.", message: nil, preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: { (_) in
+              }))
+
+            self.present(alert, animated: true, completion: nil)
+        }
 }
 
 extension DetailedScreenVC: UITableViewDelegate, UITableViewDataSource, DetailedScreenProtocol {
     func didUpdateTableView() {
+        
+        if detailedScreenViewModel.currencyRate?.count == 0 {
+            self.tableView.setEmptyMessage("Please enter the currency names correctly.")
+            showSimpleAlert()
+        } else {
+            self.tableView.restore()
+        }
+        
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            
         }
     }
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (detailedScreenViewModel.currencyRate?.count) ?? 0
         
+        return (detailedScreenViewModel.currencyRate?.count) ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
